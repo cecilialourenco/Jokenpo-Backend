@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  wins: 1
+  draws: 1
+  losses: 1
+  points: 1
+
+two:
+  name: MyString
+  wins: 1
+  draws: 1
+  losses: 1
+  points: 1
