@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, :default => {format: :json}
 
   post '/win' => 'users#win'
   post '/draw' => 'users#draw'
