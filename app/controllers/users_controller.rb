@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    @users = User.order(points: :desc).all
     render json: @users, only: [:id, :name, :wins, :draws, :losses, :points]
   end
 
@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def win
     @user.wins += 1
+    @user.points += 2
     @user.save
 
     render json: @user
@@ -22,6 +23,7 @@ class UsersController < ApplicationController
 
   def draw
     @user.draws += 1
+    @user.points += 1
     @user.save
 
     render json: @user
